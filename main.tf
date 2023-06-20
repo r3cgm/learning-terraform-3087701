@@ -4,7 +4,8 @@ data "aws_ami" "app_ami" {
   most_recent = true
 
   filter {
-    name   = [var.ami_filter.name]
+    name   = "name"
+    values = [var.ami_filter.name]
   }
 
   filter {
